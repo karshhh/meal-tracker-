@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Add Meal</title></head>
+<body>
+<h2>Add Meal</h2>
+<form th:action="@{/meals/add}" method="post" th:object="${meal}">
+    <input type="text" th:field="*{name}" placeholder="Meal Name" required/>
+    <input type="text" th:field="*{category}" placeholder="Category (breakfast/lunch/...)" required/>
+    <input type="number" th:field="*{calories}" placeholder="Calories" required/>
+    <button type="submit">Add Meal</button>
+</form>
+</body>
+</html>

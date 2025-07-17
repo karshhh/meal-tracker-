@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Meal List</title></head>
+<body>
+<h2>Your Meals</h2>
+<table>
+    <tr><th>Name</th><th>Category</th><th>Calories</th><th>Date</th></tr>
+    <tr th:each="meal : ${meals}">
+        <td th:text="${meal.name}"></td>
+        <td th:text="${meal.category}"></td>
+        <td th:text="${meal.calories}"></td>
+        <td th:text="${meal.date}"></td>
+    </tr>
+</table>
+<a href="/meals/add">Add another meal</a>
+</body>
+</html>
